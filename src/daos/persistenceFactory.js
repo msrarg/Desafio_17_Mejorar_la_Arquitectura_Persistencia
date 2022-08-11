@@ -5,14 +5,14 @@ class PersistenceFactory {
         let ProductDao;
         let CartDao;
         switch (config.app.persistence) {
-            case 'mongo':
+            case 'MONGO':
                 const { ProductDaoMongo } = require('./productos/ProductoDaoMongo');
                 const { CarritoDaoMongo } = require('./carritos/CarritoDaoMongo');
                 ProductDao = ProductDaoMongo.getInstance();
                 // ProductDao = new ProductDaoMongo();
                 CartDao = CarritoDaoMongo.getInstance();
                 return { ProductDao, CartDao };
-            case 'firestore':
+            case 'FIRESTORE':
                 const { ProductDaoFirestore } = require('./productos/ProductoDaoFirestore');
                 const { CarritoDaoFirestore } = require('./carritos/CarritoDaoFirestore');
                 ProductDao = ProductDaoFirestore.getInstance();

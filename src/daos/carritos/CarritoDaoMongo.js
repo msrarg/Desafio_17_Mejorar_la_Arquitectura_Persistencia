@@ -1,4 +1,4 @@
-const { ContainerMongo }  = require('../../containers/containerMongo');
+const { ContainerMongo } = require('../../containers/containerMongo');
 const { ProductDaoMongo } = require('../productos/ProductoDaoMongo');
 
 const carrito = require('../../models/carrito');

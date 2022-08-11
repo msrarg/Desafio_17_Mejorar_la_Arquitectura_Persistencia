@@ -2,11 +2,11 @@
   "name": "desafio-17-mejorar-la-arquitectura",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev -- -p 8080",
-    "dev": "nodemon app.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "Mauricio Simón Rodriguez",
   "license": "ISC",

@@ -1,4 +1,4 @@
-const { ContainerFirestore }  = require('../../containers/ContainerFirestore')
+const { ContainerFirestore } = require('../../containers/ContainerFirestore')
 const { ProductDaoFirestore } = require('../productos/ProductoDaoFirestore');
 
 let app = null;

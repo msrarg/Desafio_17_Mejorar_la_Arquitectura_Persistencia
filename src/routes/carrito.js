@@ -1,10 +1,19 @@
 const express = require('express');
 const { Router } = express; 
 const router = Router();
+const cartController = require('../controllers/carrito.controller');
 
-const cartController       = require('../controllers/carrito.controller');
-const validarAdministrador = require('../middlewares/validar-admin.js');
-
+const validarAdministrador = (req, res, next) => {
+    const path = req.originalUrl;
+    const metodo = req.method;
+    if (ADMIN !== true){
+        return res.status(401).json({
+            error: -1,
+            descripcion:`ruta ${path} método ${metodo} no autorizada`
+        });
+    }
+    next();
+}
 // Crea un carrito y devuelve su id
 router.post("/",validarAdministrador, cartController.newCart);
 
