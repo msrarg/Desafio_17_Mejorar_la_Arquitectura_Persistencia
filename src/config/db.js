@@ -5,7 +5,7 @@ dotenv.config();
 let store_memoria;
 let store_file;
 
-const dbConnection = async () => {
+const dbConnection = () => {
     switch (process.env.PERSISTENCE) {
         case 'MEMORIA':
             store_memoria = {
