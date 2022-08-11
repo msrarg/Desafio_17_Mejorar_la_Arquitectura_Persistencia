@@ -81,5 +81,10 @@ const deleteProduct = async (req, res) => {
     }
 }
 module.exports = {
-    newCart, deleteCart, getProducts, getCarts, addProduct, deleteProduct
-}
+    newCart, 
+    deleteCart, 
+    getProducts, 
+    getCarts, 
+    addProduct, 
+    deleteProduct
+};

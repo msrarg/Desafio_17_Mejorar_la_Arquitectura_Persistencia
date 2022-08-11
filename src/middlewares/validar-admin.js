@@ -1,4 +1,6 @@
-const validarAdministrador = (req = requiere, res = response, next) => {
+const { response, request } = require('express');
+
+const validarAdministrador = (req = request, res = response, next) => {
     const path   = req.originalUrl;
     const method = req.method;
     if (process.env.ADMINISTRADOR !== true){
